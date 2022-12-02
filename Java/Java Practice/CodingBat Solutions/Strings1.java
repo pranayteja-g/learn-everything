@@ -372,7 +372,19 @@ public String startWord(String str, String word) {
 Given a string, if the first or last chars are 'x', return the string without those 'x' chars, and otherwise return the string unchanged.
 withoutX("xHix") → "Hi"
 withoutX("xHi") → "Hi" */
-
+public String withoutX(String str) {
+  int len = str.length();
+  if(len < 2){
+    return "";
+  }else if(str.charAt(0)=='x' && str.charAt(len-1)=='x'){
+    return str.substring(1,len-1);
+  }else if(str.charAt(0)=='x'){
+    return str.substring(1,len);
+  }else if(str.charAt(len-1)=='x'){
+    return str.substring(0,len-1);
+  }
+  return str;
+}
 
 /* withoutX2
 Given a string, if one or both of the first 2 chars is 'x', return the string without those 'x' chars, and otherwise return the string unchanged.
