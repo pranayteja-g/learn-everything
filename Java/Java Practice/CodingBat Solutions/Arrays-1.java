@@ -79,8 +79,9 @@ public int[] maxEnd3(int[] nums) {
     return numb;
   }
   else if(nums[nums.length-1] > nums[0]){
-    int [] numl = {nums[nums.length-1],nums[nums.length-1],nums[nums.length-1]};
-    return numl;
+    nums[0] = nums[nums.length-1];
+    nums[1] = nums[nums.length-1];
+    nums[2] = nums[nums.length-1];
   }
   return nums;
 }
