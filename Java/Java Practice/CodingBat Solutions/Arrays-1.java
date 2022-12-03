@@ -100,3 +100,52 @@ public int sum2(int[] nums) {
   return nums[len-1];
 }
 
+/* middleWay
+Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their middle elements.
+middleWay([1, 2, 3], [4, 5, 6]) → [2, 5] */
+public int[] middleWay(int[] a, int[] b) {
+  int []c = {a[1],b[1]};
+  return c;
+}
+
+/* makeEnds
+Given an array of ints, return a new array length 2 containing the first and last elements from the original array.
+The original array will be length 1 or more. makeEnds([1, 2, 3]) → [1, 3] */
+public int[] makeEnds(int[] nums) {
+  int [] a = {nums[0],nums[nums.length-1]};
+  return a;
+}
+
+/* has23
+Given an int array length 2, return true if it contains a 2 or a 3.
+has23([2, 5]) → true */
+public boolean has23(int[] nums) {
+ for(int i=0;i<nums.length;i++){
+    if(nums[i]==2 || nums[i]==3){
+      return true;
+    }
+ }
+ return false;
+}
+
+/* no23
+Given an int array length 2, return true if it does not contain a 2 or 3.
+no23([4, 5]) → true */
+public boolean no23(int[] nums) {
+  for(int i=0;i<nums.length;i++){
+    if(nums[i]==2 || nums[i]==3){
+      return false;
+    }
+ }
+ return true;
+}
+
+/* makeLast
+Given an int array, return a new array with double the length where its last element is the same as the original array, and all the other elements are 0.
+makeLast([4, 5, 6]) → [0, 0, 0, 0, 0, 6] */
+public int[] makeLast(int[] nums) {
+  int len = nums.length;
+  int [] a = new int[2*len];
+  a[a.length-1] = nums[len-1];
+  return a;
+}
