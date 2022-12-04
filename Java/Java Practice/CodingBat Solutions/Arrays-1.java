@@ -240,3 +240,15 @@ public int[] swapEnds(int[] nums) {
   nums[nums.length-1] = temp[0];
   return nums;
 }
+
+/*  midThree
+Given an array of ints of odd length, return a new array length 3 containing the elements from the middle of the array. The array length will be at least 3.
+midThree([1, 2, 3, 4, 5]) → [2, 3, 4] */
+public int[] midThree(int[] nums) {
+  int len = nums.length;
+  int []a = new int[3];
+  a[0] = nums[(len/2)-1];
+  a[1] = nums[len/2];
+  a[2] = nums[(len/2)+1];
+  return a;
+}
