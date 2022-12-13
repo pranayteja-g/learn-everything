@@ -149,3 +149,106 @@ public int[] makeLast(int[] nums) {
   a[a.length-1] = nums[len-1];
   return a;
 }
+
+/* double23
+Given an int array, return true if the array contains 2 twice, or 3 twice. The array will be length 0, 1, or 2.
+double23([2, 2]) → true, double23([3, 3]) → true */
+public boolean double23(int[] nums) {
+  int len = nums.length;
+  if(len == 2){
+    for(int i=0;i<len;i++){
+      if(nums[i]==2 && nums[i+1]==2){
+        return true;
+      }
+      return (nums[i]==3 && nums[i+1]==3);
+  }
+  }
+  return false;
+}
+
+/* fix23
+Given an int array length 3, if there is a 2 in the array immediately followed by a 3, set the 3 element to 0. Return the changed array.
+fix23([1, 2, 3]) → [1, 2, 0] */
+public int[] fix23(int[] nums) {
+  int len = nums.length;
+  for(int i=0;i<len;i++){
+    if(nums[i]==2 && nums[i+1]==3){
+      nums[i+1] = 0;
+    }
+  }
+  return nums;
+}
+
+/* start1
+Start with 2 int arrays, a and b, of any length. Return how many of the arrays have 1 as their first element.
+start1([1, 2, 3], [1, 3]) → 2 */
+public int start1(int[] a, int[] b) {
+  int one = 0;
+  if(a.length>=1 && a[0] == 1 ){
+    one += 1;
+  }
+  if(b.length >=1 && b[0] == 1){
+    one += 1;
+  }
+  return one;
+}
+
+
+/* biggerTwo
+Start with 2 int arrays, a and b, each length 2. Consider the sum of the values in each array. Return the array which has the largest sum.
+In event of a tie, return a. biggerTwo([1, 2], [3, 4]) → [3, 4] */
+public int[] biggerTwo(int[] a, int[] b) {
+  int sa =0;
+  int sb =0;
+  int len = a.length;
+  for(int i=0;i<1;i++){
+    sa = a[i]+a[i+1];
+    sb = b[i]+b[i+1];
+  }
+  int diff = sa - sb;
+  if(sa == sb || diff >0){
+    return a;
+  }
+    return b;
+}
+
+/* makeMiddle
+Given an array of ints of even length, return a new array length 2 containing the middle two elements from the original array.
+The original array will be length 2 or more. makeMiddle([1, 2, 3, 4]) → [2, 3] */
+public int[] makeMiddle(int[] nums) {
+  int half = nums.length/2;
+  int []a = new int[2];
+  a[0] = nums[half-1];
+  a[1] = nums[half];
+  return a;
+}
+
+/*plusTwo
+Given 2 int arrays, each length 2, return a new array length 4 containing all their elements.
+plusTwo([1, 2], [3, 4]) → [1, 2, 3, 4], plusTwo([4, 4], [2, 2]) → [4, 4, 2, 2] */
+public int[] plusTwo(int[] a, int[] b) {
+  int []c = {a[0],a[1],b[0],b[1]};
+  return c;
+}
+
+/* swapEnds
+Given an array of ints, swap the first and last elements in the array. Return the modified array. The array length will be at least 1.
+swapEnds([1, 2, 3, 4]) → [4, 2, 3, 1] */
+public int[] swapEnds(int[] nums) {
+  int []temp = {nums[0],nums[nums.length-1]};
+  nums[0] = temp[1];
+  nums[nums.length-1] = temp[0];
+  return nums;
+}
+
+/*  midThree
+Given an array of ints of odd length, return a new array length 3 containing the elements from the middle of the array. The array length will be at least 3.
+midThree([1, 2, 3, 4, 5]) → [2, 3, 4] */
+public int[] midThree(int[] nums) {
+  int len = nums.length;
+  int []a = new int[3];
+  a[0] = nums[(len/2)-1];
+  a[1] = nums[len/2];
+  a[2] = nums[(len/2)+1];
+  return a;
+}
