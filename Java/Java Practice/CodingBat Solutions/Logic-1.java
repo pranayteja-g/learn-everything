@@ -11,7 +11,7 @@ public boolean cigarParty(int cigars, boolean isWeekend) {
   }
   return false;
 }
-
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* You and your date are trying to get a table at a restaurant.
 The parameter "you" is the stylishness of your clothes, in the range 0..10, and "date" is the stylishness of your date's clothes.
 The result getting the table is encoded as an int value with 0=no, 1=maybe, 2=yes.
@@ -28,7 +28,7 @@ public int dateFashion(int you, int date) {
   }
   return 1;
 }
-
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
 /*The squirrels in Palo Alto spend most of the day playing.
 In particular, they play if the temperature is between 60 and 90 (inclusive).
 Unless it is summer, then the upper limit is 100 instead of 90. 
@@ -44,7 +44,7 @@ public boolean squirrelPlay(int temp, boolean isSummer) {
   }
   return false;
 }
-
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
 /*
 You are driving a little too fast, and a police officer stops you.
 Write code to compute the result, encoded as an int value: 0=no ticket, 1=small ticket, 2=big ticket. 
@@ -62,7 +62,7 @@ public int caughtSpeeding(int speed, boolean isBirthday) {
     }
       return 2;
 }
-
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
 /*
 Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive, are forbidden, so in that case just return 20.
 sortaSum(3, 4) → 7
@@ -75,7 +75,7 @@ public int sortaSum(int a, int b) {
   }
   return c;
 }
-
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
 //alarmClock
 public String alarmClock(int day, boolean vacation) {
   if(vacation == false && (day >0 && day < 6)){
@@ -85,7 +85,7 @@ public String alarmClock(int day, boolean vacation) {
   }
   return "off";
 }
-
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
 //love6
 public boolean love6(int a, int b) {
   int d = a+b;
@@ -96,5 +96,69 @@ public boolean love6(int a, int b) {
   return false;
 }
 
-
-
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+//in1To10
+public boolean in1To10(int n, boolean outsideMode) {
+  if(outsideMode == false){
+    if(n<1 || n> 10){
+      return false;
+    }else if(n>=1 || n<=10){
+      return true;
+    }
+  }else if(outsideMode == true){
+    if(n<=1 || n>= 10){
+      return true;
+    }else{
+      return false;
+    }
+  }
+  return true;
+}
+//or
+public boolean in1To10(int n, boolean outsideMode) {
+    if (outsideMode) {
+        return n <= 1 || n >= 10;
+    } else {
+        return n >= 1 && n <= 10;
+    }
+}
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+//specialEleven
+public boolean specialEleven(int n) {
+  int m = n%11;
+  if(m==0 || m==1){
+    return true;
+  }
+  return false;
+}
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+//more20
+public boolean more20(int n) {
+  int m = n%20;
+  if(m == 1 || m==2){
+    return true;
+  }
+  return false;
+}
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+//old35
+public boolean old35(int n) {
+  int m = n%3;
+  int p = n%5;
+  if(m == 0 && p == 0){
+    return false;
+  }else if(m == 0 || p == 0){
+    return true;
+  }
+  return false;
+}
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+//less20
+public boolean less20(int n) {
+  int m = n%20;
+  if(m==18 || m==19){
+    return true;
+  }
+  return false;
+}
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
