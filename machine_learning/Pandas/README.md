@@ -90,3 +90,49 @@ ffts["fstCol"][0]
 ```
 
 gives the first value in the first column of the DataFrame
+
+
+## summary functions
+
+```python
+datafarame_name.column_name.describe()
+```
+
+describe() method generates a high-level summary of the attributes of the given column.
+
+It is “type aware” meaning that its output changes based on the datatypes of the input.
+
+pandas has a lot of helpful functions to get some simple summary statistic about a column in a DataFrame or a series.
+
+to get mean, 
+
+```python
+dataframe_name.column_name.mean()
+```
+
+to get list of unique values,
+
+```python
+dataframe_name.column_name.unique()
+```
+
+to see a list of unique values and how often they occur in the dataset,
+
+```python
+dataframe_name.column_name.value_counts()
+```
+
+
+## Maps
+
+maps are often used for creating new representation from the existing data, or for transforming data from the format it is in now to the format that we want it to be in later, which makes them extremely important.
+
+two mapping methods are often used:
+
+map() and apply()
+
+apply() is equivalent method if we want to transform a whole DataFrame by calling a custom method on each row. 
+
+map() returns new transformed series.
+
+apply() returns new transformed DataFrame.
