@@ -98,7 +98,7 @@ gives the first value in the first column of the DataFrame
 datafarame_name.column_name.describe()
 ```
 
-describe() method generates a high-level summary of the attributes of the given column.
+```describe()``` method generates a high-level summary of the attributes of the given column.
 
 It is “type aware” meaning that its output changes based on the datatypes of the input.
 
@@ -129,10 +129,10 @@ maps are often used for creating new representation from the existing data, or f
 
 two mapping methods are often used:
 
-map() and apply()
+```map()``` and ```apply()```
 
-apply() is equivalent method if we want to transform a whole DataFrame by calling a custom method on each row. 
+```apply()``` is equivalent method if we want to transform a whole DataFrame by calling a custom method on each row. 
 
-map() returns new transformed series.
+```map()``` returns new transformed series.
 
-apply() returns new transformed DataFrame.
+```apply()``` returns new transformed DataFrame.
