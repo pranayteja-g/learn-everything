@@ -42,7 +42,7 @@ myList[1] = 10.8;
 ```
 this assigns the values 12.5 and 10.8 to the array at indices, 0 and 1.
 
-#### NOTE: 
+#### note: 
 An array variable that appears to hold an array actually contains a reference to that array.
 Strictly speaking, an array variable and an array are different, but most of the time the
 distinction can be ignored. Thus it is all right to say, for simplicity, that myList is an
