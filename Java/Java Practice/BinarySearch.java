@@ -48,6 +48,7 @@ public class BinarySearch{
             else
                 low = mid+1;
         }
+        //if key is not in the list, this line will show the index where key should be at to keep the array sorted
         return -low - 1;
     }
 }
