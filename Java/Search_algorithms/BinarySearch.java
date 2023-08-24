@@ -42,11 +42,11 @@ public class BinarySearch{
         while(high >= low){
             int mid = (low + high)/2;
             if(key < list[mid])
-                high = mid-1;
+                high = mid-1; // updates the high to the immediate value less than mid.
             else if(key == list[mid])
                 return mid;
             else
-                low = mid+1;
+                low = mid+1; //updates the low to the immediate value greater than the mid.
         }
         //if key is not in the list, this line will show the insertion point where key should be at to keep the array sorted
         return -low - 1;
