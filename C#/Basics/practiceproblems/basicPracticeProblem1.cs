@@ -33,6 +33,12 @@ int jeong5 = 97;
 int jeongSum = jeong1 + jeong2 + jeong3 + jeong4 + jeong5; // adding all the grades
 decimal jeongAVG = (decimal)jeongSum/currentAssignments; // calculating the average
 
-Console.WriteLine($"Total Scores:\n----------\nsophiaSum: {sophiaSum}\nnicolasSum: {nicolasSum}\nzahirahSum: {zahirahSum}\njeongSum: {jeongSum}");
-Console.WriteLine("---------------------------------------");
-Console.WriteLine($"Averages:\n----------\nsophia : {sophiaAVG} A\nnicolas: {nicolasAVG} B\nzahirah: {zahirahAVG} B\njeong  : {jeongAVG} A");
+Console.WriteLine("Student\t\tGrade\n");
+Console.WriteLine("Sophia:\t\t" + sophiaAVG + "\tA");
+Console.WriteLine("Nicolas:\t" + nicolasAVG + "\tB");
+Console.WriteLine("Zahirah:\t" + zahirahAVG + "\tB");
+Console.WriteLine("Jeong:\t\t" + jeongAVG + "\tA");
+
+//Console.WriteLine($"Total Scores:\n----------\nsophiaSum: {sophiaSum}\nnicolasSum: {nicolasSum}\nzahirahSum: {zahirahSum}\njeongSum: {jeongSum}");
+//Console.WriteLine("---------------------------------------");
+//Console.WriteLine($"Averages:\n----------\nsophia : {sophiaAVG} A\nnicolas: {nicolasAVG} B\nzahirah: {zahirahAVG} B\njeong  : {jeongAVG} A");
