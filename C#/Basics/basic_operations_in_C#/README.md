@@ -1,5 +1,5 @@
 # Basic Operations and Increment/Decrement in C#
-
+-- refer the code in [basicOperations.cs](./basicOperations.cs) file.
 ## Basic Operations
 
 ### Variables
@@ -33,5 +33,3 @@ We explore operator precedence in the code:
 - We declare an integer variable `number` and initialize it to `1`.
 - We demonstrate various ways to decrement `number`:
   - `number = number - 1`, `number -= 1`, and `number--` all decrease `number` by `1`.
-
-
